@@ -1,5 +1,10 @@
 const val = document.getElementById("search")
 
+function getout(){
+  data.output()
+}
+
+
 let data = {
   key: "de97c98f4e17234aeca641bfa50c0429",
   apiKey: '1be9a6884abd4c3ea143b59ca317c6b2',
@@ -10,7 +15,10 @@ let data = {
       ip = ipb.split('"')[1]
       console.log(ip)
       val.value = ip
+      console.log(val.value)
+      getout()
     });
+
   },
   getweather: function (city) {
     fetch(
@@ -49,7 +57,7 @@ val.addEventListener("keydown", (event) => {
     }
 });
 
-data.getip()
+data.getip();
 
 
 
